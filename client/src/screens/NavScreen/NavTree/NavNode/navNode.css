@@ -34,14 +34,14 @@ ul, #myUL {
 }
 
 ul {
-    margin:0 0 0 1em; /* indentation */
+    margin:0 0 0 1em;
     padding:0;
     list-style:none;
     color:#369;
     position:relative;
 }
 
-.tree ul {margin-left:.5em} /* (indentation/2) */
+.tree ul {margin-left:.5em}
 
 .tree:before,
 .tree ul:before {
@@ -57,8 +57,8 @@ ul {
 
 .tree li {
     margin: 10px 0;
-    padding:0 1.5em; /* indentation + .5em */
-    line-height:2em; /* default list item's `line-height` */
+    padding:0 1.5em;
+    line-height:2em;
     font-weight:bold;
     position:relative;
 }
@@ -66,18 +66,22 @@ ul {
 .tree li:before {
     content:"";
     display:block;
-    width:10px; /* same with indentation */
+    width:10px;
     height:0;
     border-top:1px solid;
-    margin-top:-1px; /* border top width */
+    margin-top:-1px;
     position:absolute;
-    top:1em; /* (line-height/2) */
+    top:1em;
     left:0;
 }
 
 .tree li:last-child:before {
-    background:white; /* same with body background */
+    background:white;
     height:auto;
-    top:1em; /* (line-height/2) */
+    top:1em;
     bottom:0;
+}
+
+span {
+    cursor: pointer;
 }

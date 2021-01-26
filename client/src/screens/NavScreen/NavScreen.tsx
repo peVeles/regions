@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { NavBlock } from "./NavBlock/NavBlock";
-import { buildGraphByRegions } from "../../utils/regions.utils";
-import { regionsTree } from "../../types/region";
-import {getRegions} from "../../api/regions/regions.api";
+import { useState, useEffect } from 'react';
+import { buildTreeByRegions } from "../../utils/regions.utils";
+import { getRegions } from "../../api/regions/regions.api";
+import { NavTree } from "./NavTree/NavTree";
+import { regionsTree } from "../../types/regions";
 import './navScreen.css';
 
 
@@ -11,13 +11,14 @@ export const NavScreen = () => {
     const [pastClick, setPastClick] = useState({});
 
     useEffect(() => {
-        getRegions().then(res => setTree(buildGraphByRegions(res)));
+        getRegions().then(res => setTree(buildTreeByRegions(res)));
     }, []);
 
     return (
         <div className="navScreen">
-            <NavBlock tree={tree}
-                      onElementClick={(obj: any) => setPastClick(obj)}
+            <NavTree
+                tree={tree}
+                onElementClick={(obj: any) => setPastClick(obj)}
             />
             <div className={'navScreenInfo'}>
                 <div>

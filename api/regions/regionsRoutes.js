@@ -1,4 +1,4 @@
-const regionsController = require('../controllers/regions.controller')
+const regionsController = require('./regionsController')
 const Router = require('express');
 const router = new Router();
 
