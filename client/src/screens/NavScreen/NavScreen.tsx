@@ -14,6 +14,7 @@ export const NavScreen = () => {
         getRegions().then(res => setTree(buildTreeByRegions(res)));
     }, []);
 
+
     return (
         <div className="navScreen">
             <NavTree
@@ -28,4 +29,5 @@ export const NavScreen = () => {
             </div>
         </div>
     );
+
 }

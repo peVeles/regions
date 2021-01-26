@@ -30,7 +30,7 @@ export const TreeNode = ({node, onElementClick}: IProps) => {
 
     const handleToggle = () => {
         setActive(!active);
-        onElementClick({...node, children: null})
+        onElementClick({ name: node.name, id: node.id, path: node.path })
     }
 
 

@@ -1,6 +1,8 @@
 import { regions, regionsTree } from "../types/regions";
 
 export const buildTreeByRegions = (regions: regions[]): regionsTree => {
+    if (!regions) { return { children: {} }; }
+
     /* Use object instead of arrays to complete build in linear time */
 
     const resolvePath = (root: regionsTree, path: string, region: regions) => {
